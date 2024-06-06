@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            width: 100%;
+            height: 10vh;
+            background-color: rgb(91, 91, 236);
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+        }
+
+        .nav-list {
+            padding-left: 44px;
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo {
+            padding-left: 69px;
+        }
+
+        .dropdown-list{
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 65px;
+            margin-left: 17px;
+        }
+
+        option{
+            color: black;
+        }
+
+        .head {
+            height: 15vh;
+            width: 65%;
+            margin: 40px;
+            padding: 20px;
+            background-color: rgb(194, 217, 224);
+            font-size: 21px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(85, 79, 79);
+        }
+
+        textarea {
+            font-size: 16px;
+            padding: 15px;
+            margin-left: 40px;
+            resize: none;
+            overflow: hidden;
+            width: 65%;
+            height: 44vh;
+            font-family: Arial;
+        }
+
+        .second-head {
+            height: 10vh;
+            width: 65%;
+            margin: 10px 0px 0px 40px;
+            padding: 15px;
+            background-color: #eee;
+            font-size: 14px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(85, 79, 79);
+        }
+
+        .para{
+            margin: 42px;
+        }
+
+        .details{
+            width: 98%;
+            height: 68vh;
+            padding: 30px;
+            background-color: #faf6f6;
+        }
+
+        .details h3{
+            padding: 0px 0px 25px 0px;
+            font-size: 32px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer{
+            background-color: black;
+            display: flex;
+            color: white;
+        }
+
+        .left-footer{
+            padding: 4% 50px 4% 10%;
+        }
+
+        .left-footer p{
+            color: white;
+            font-size: 22px;
+        }
+
+        .left-footer ul{
+            margin-top: 15px;
+            list-style: none;
+        }
+
+        .left-footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .mid-footer ul{
+            margin: 85px 30px 30px 240px;
+            list-style: none;
+        }
+
+        
+        .mid-footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .right-footer p{
+            margin: 85px 30px 0px 290px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .right-footer ul{
+            margin: 5px 30px 30px 290px;
+            list-style: none;
+        }
+
+        
+        .right-footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <img src="https://wordcounter.net/images/wc-logo.png" height="40" width="220">
+            </div>
+            <ul class="nav-list">
+                <a href="#"><li>Home</a></li>
+                <a href="#"><li>Blog</a></li>
+                <select class="dropdown-list">
+                    <option>More</option>
+                    <option>More Tools</option>
+                    <option>Help Us Out</option>
+                </select>
+                <a href="#"><li>Sign in</a></li>
+            </ul>
+        </div>
+        <div class="hero-section">
+            <div class="hero-left">
+                <div class="head" id="counter">
+                    <h1><span id="wordCount">0</span> words <span id="charCount">0</span> characters</h1>
+                </div>
+                <div class="hero-left-content">
+                    <textarea placeholder="Start typing, or copy and paste your document here..." id="text" oninput="countWords()" oninput="countWordss()"></textarea>
+                </div>
+                <div class="second-head" id="counters">
+                    <h1><span id="wordCounts">0</span> words <span id="charCounts">0</span> characters</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="para">
+        <div class="details">
+        <h3>What is WordCounter?</h3>
+        <p>Apart from counting words and characters, our online editor can help you to improve word choice and writing style, and, optionally, help you to detect grammar mistakes and plagiarism. To check word count, simply place your cursor into the text box above and start typing. You'll see the number of characters and words increase or decrease as you type, delete, and edit them. You can also copy and paste text from another program over into the online editor above. The Auto-Save feature will make sure you won't lose any changes while editing, even if you leave the site and come back later. <b>Tip: Bookmark this page now.</b><br><br>
+
+            Knowing the word count of a text can be important. For example, if an author has to write a minimum or maximum amount of words for an article, essay, report, story, book, paper, you name it. WordCounter will help to make sure its word count reaches a specific requirement or stays within a certain limit.<br><br>
+            
+            In addition, WordCounter shows you the top 10 keywords and keyword density of the article you're writing. This allows you to know which keywords you use how often and at what percentages. This can prevent you from over-using certain words or word combinations and check for best distribution of keywords in your writing.<br><br>
+            
+            In the Details overview you can see the average speaking and reading time for your text, while Reading Level is an indicator of the education level a person would need in order to understand the words you’re using.<br><br>
+            
+            Disclaimer: We strive to make our tools as accurate as possible but we cannot guarantee it will always be so.</p>
+    
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="left-footer">
+            <p>Site Map</p>
+            <ul>
+                <a href="./Word Counter.html"><li>Home</a></li>
+                <a href="#"><li>Blog</a></li>
+                <a href="#"><li>More Tools</a></li>
+                <a href="#"><li>Help WordCounter</a></li>
+                <a href="#"><li>Embed WordCounter</a></li>
+            </ul>
+        </div>
+        <div class="mid-footer">
+            <ul>
+                <a href="#"><li>Report a Bug</a></li>
+                <a href="#"><li>Contact Us</a></li>
+                <a href="#"><li>Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="right-footer">
+            <p>Follow</p>
+            <ul>
+                <a href="https://www.facebook.com/" target="_blank"><li>Facebook</a></li>
+                <a href="https://en.wikipedia.org/wiki/Twitter" target="_blank"><li>Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // let text = document.getElementById("text").value;
+        // let counter = document.getElementById("counter");
+        // const  counter = text.length;
+
+            function countWords() {
+                        const text = document.getElementById('text').value;
+                        //filter...control spaces between words
+                        //split...first line of words convert into array and then count words
+                        // const wordCount = text.split(" ").filter(word => word !== '').length;
+                        // document.getElementById('wordCount').textContent = wordCount;
+                        const charCount = text.length;
+                        document.getElementById('charCount').textContent = charCount;
+                        // const wordCounts = text.split(" ").filter(word => word !== '').length;
+                        // document.getElementById('wordCounts').textContent = wordCounts;
+                        const charCounts = text.length;
+                        document.getElementById('charCounts').textContent = charCounts;
+            }
+
+
+    </script>
+
+</body>
+
+</html>
